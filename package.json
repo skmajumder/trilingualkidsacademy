@@ -1,0 +1,25 @@
+{
+  "name": "trilingualkidsacademy",
+  "version": "1.0.0",
+  "description": "This ia a assignment task for Rainbow Enterprise web development internship.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skmajumder/trilingualkidsacademy.git"
+  },
+  "keywords": [
+    "assignment",
+    "task",
+    "for",
+    "internship"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skmajumder/trilingualkidsacademy/issues"
+  },
+  "homepage": "https://github.com/skmajumder/trilingualkidsacademy#readme"
+}
