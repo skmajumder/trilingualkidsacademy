@@ -4,6 +4,7 @@
   "description": "This ia a assignment task for Rainbow Enterprise web development internship.",
   "main": "index.js",
   "scripts": {
+    "start": "browser-sync start --proxy http://trilingualkidsacademy.local --files *.php --browser chrome",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
