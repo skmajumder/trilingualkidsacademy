@@ -22,3 +22,9 @@ require_once get_theme_file_path( './inc/functions/theme-support.php' );
  */
 
 require_once get_theme_file_path( './inc/functions/theme-assets.php' );
+
+/**
+ * trilingualkidsacademy CPT
+ */
+
+require_once get_theme_file_path( './inc/functions/theme-cpt.php' );
