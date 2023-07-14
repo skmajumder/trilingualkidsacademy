@@ -1,5 +1,6 @@
 <?php
 if ( ! function_exists( 'trilingualkidsacademy_theme_support' ) ):
+
 	function trilingualkidsacademy_theme_support(): void {
 		load_theme_textdomain( 'trilingualkidsacademy' );
 		add_theme_support( 'post-thumbnails' );

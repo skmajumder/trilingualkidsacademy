@@ -20,3 +20,5 @@ require_once get_theme_file_path( './inc/functions/theme-support.php' );
 /**
  * trilingualkidsacademy theme assets
  */
+
+require_once get_theme_file_path( './inc/functions/theme-assets.php' );
