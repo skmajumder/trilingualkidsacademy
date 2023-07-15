@@ -28,7 +28,7 @@ get_header( 'home' );
 <?php get_template_part( './template-parts/sections/section', 'cta' ); ?>
 
     <!-- :: Section Free Demo :: -->
-<?php get_template_part( './template-parts/sections/section', 'free-demo' ); ?>
+
 
     <!-- :: Section Feedback :: -->
 <?php get_template_part( './template-parts/sections/section', 'feedback' ); ?>

@@ -17,7 +17,7 @@ $homeCounterSection     = new WP_Query( $homeCounterSectionArgs );
 if ( $homeCounterSection->post_count > 0 ):
 	if ( $homeCounterSection->have_posts() ): while ( $homeCounterSection->have_posts() ): $homeCounterSection->the_post();
 		?>
-        <section class="tf-section tf-counter">
+        <section <?php post_class( 'tf-section tf-counter' ); ?> id="<?php echo esc_attr( $post->post_name ); ?>">
             <div class="container">
                 <div class="row">
 

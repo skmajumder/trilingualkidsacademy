@@ -2335,11 +2335,11 @@
 }
 
 .sc-contact .wrap {
-    width: 56%;
+    width: 75%;
 }
 
 .sc-contact .inner-sc-contact {
-    width: 40%;
+    width: 25%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -2508,7 +2508,7 @@
 }
 
 .tf-sc-about1 {
-    background-image   : url(../images/background/bg-aboutus-1.png);
+
 	background-repeat  : no-repeat;
 	background-position: center center;
     background-size: cover;

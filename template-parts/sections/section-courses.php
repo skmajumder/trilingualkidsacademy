@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="sc-service st-3 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
                      data-wow-duration="800ms">
                     <div class="box-feature inner-scale"><img
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="sc-service st-4 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
                      data-wow-duration="1000ms">
                     <div class="box-feature inner-scale"><img
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="sc-service fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
                      data-wow-duration="1200ms">
                     <div class="box-feature inner-scale"><img
@@ -59,74 +59,6 @@
                     <div class="box-content">
                         <h4 class="title"><a href="program.html" class="clr-pri-1">Special Education</a>
                         </h4>
-                        <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="sc-service st-2 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
-                     data-wow-duration="1400ms">
-                    <div class="box-feature inner-scale"><img
-                                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/common/sc-service-4.jpg"
-                                alt="Image"></div>
-                    <div class="box-content">
-                        <h4 class="title"><a href="program.html" class="clr-pri-1">Music,Videos & Films</a>
-                        </h4>
-                        <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="sc-service st-3 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
-                     data-wow-duration="800ms">
-                    <div class="box-feature inner-scale"><img
-                                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/common/sc-service-5.jpg"
-                                alt="Image"></div>
-                    <div class="box-content">
-                        <h4 class="title"><a href="program.html" class="clr-pri-1">Birthday Party</a></h4>
-                        <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="sc-service st-4 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
-                     data-wow-duration="1000ms">
-                    <div class="box-feature inner-scale"><img
-                                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/common/sc-service-6.jpg"
-                                alt="Image"></div>
-                    <div class="box-content">
-                        <h4 class="title"><a href="program.html" class="clr-pri-1">Life Style & Food</a>
-                        </h4>
-                        <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="sc-service fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
-                     data-wow-duration="1200ms">
-                    <div class="box-feature inner-scale"><img
-                                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/common/sc-service-7.jpg"
-                                alt="Image"></div>
-                    <div class="box-content">
-                        <h4 class="title"><a href="program.html" class="clr-pri-1">Physical Exercise</a>
-                        </h4>
-                        <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="sc-service st-2 fl-scale wow fadeIn animated" data-wow-delay="0.3ms"
-                     data-wow-duration="1400ms">
-                    <div class="box-feature inner-scale"><img
-                                src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/common/sc-service-8.jpg"
-                                alt="Image"></div>
-                    <div class="box-content">
-                        <h4 class="title"><a href="program.html" class="clr-pri-1">Activity Rooms</a></h4>
                         <p class="sub f-mulish clr-pri-1">Quis autem vel eum rehenderit</p>
                     </div>
                 </div>
