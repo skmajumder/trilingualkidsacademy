@@ -12,7 +12,7 @@ get_header( 'home' );
     <!-- :: Section Discover :: -->
 <?php get_template_part( './template-parts/sections/section', 'discovery' ); ?>
 
-    <!-- :: Section Discover :: -->
+    <!-- :: Section About Us :: -->
 <?php get_template_part( './template-parts/sections/section', 'about' ); ?>
 
     <!-- :: Section Counter :: -->

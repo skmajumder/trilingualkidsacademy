@@ -1321,7 +1321,7 @@ a:focus {
 
 #mainnav .menu li a {
     color: var(--primary-color2);
-    font-size: 18px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 

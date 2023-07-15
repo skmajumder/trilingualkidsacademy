@@ -12,19 +12,25 @@ define( 'VERSION', wp_get_theme()->get( 'Version' ) );
 require_once get_theme_file_path( './inc/tgm.php' );
 
 /**
- * Enable trilingualkidsacademy Theme Support
+ * Enable Theme Support
  */
 
 require_once get_theme_file_path( './inc/functions/theme-support.php' );
 
 /**
- * trilingualkidsacademy theme assets
+ *  theme assets
  */
 
 require_once get_theme_file_path( './inc/functions/theme-assets.php' );
 
 /**
- * trilingualkidsacademy CPT
+ * CPT
  */
 
 require_once get_theme_file_path( './inc/functions/theme-cpt.php' );
+
+/**
+ * Custom function
+ */
+
+require_once get_theme_file_path( './inc/functions/theme-custom-function.php' );

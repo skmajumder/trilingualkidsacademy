@@ -17,11 +17,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 
-<!-- Preloader -->
-<div id="preload" class="preload">
-    <div class="preload-logo"></div>
-</div>
-
 <div id="wrapper">
     <div id="page" class="clearfix">
         <header id="site-header" class="header_main header2">
@@ -35,7 +30,9 @@ if ( function_exists( 'wp_body_open' ) ) {
                                          alt="Kinco">
                                 </a>
                             </div>
-                            <div class="btn-menu"><span></span></div>
+                            <div class="btn-menu">
+                                <span></span>
+                            </div>
 
                             <div class="nav-wrap">
 								<?php get_template_part( './template-parts/common/navigation/navigation', 'top' ); ?>
