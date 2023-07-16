@@ -4,97 +4,121 @@
             <div class="row">
                 <div class="col-12">
                     <div class="widget-footer">
-                        <div class="widget widget-logo">
-                            <div class="logo-bottom" id="logo-footer">
-                                <a href="index.html"><img
-                                            src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo/logofootert.png"
-                                            alt="kinco"></a>
+						<?php
+						if ( function_exists( 'get_option' ) ):
+							$themeHeaderOptions = get_option( 'theme_framework' );
+							$footerLogo = $themeHeaderOptions['newblog-footer-logo'];
+							?>
+                            <div class="widget widget-logo">
+                                <div class="logo-bottom" id="logo-footer">
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                        <img src="<?php echo esc_url( $footerLogo ); ?>" alt="Logo">
+                                    </a>
+                                </div>
+								<?php
+								$description = $themeHeaderOptions['newblog-footer-description'];
+								if ( $description ):
+									echo '<p class="wrap f-mulish">' . esc_html( $description ) . '</p>';
+								endif; ?>
+                                <div class="list-contact">
+                                    <ul>
+										<?php
+										$address = $themeHeaderOptions['newblog-footer-address'];
+										if ( $address ):
+											?>
+                                            <li class="fx">
+                                            <span>
+                                                <i class="far fa-map-marker-alt"></i>
+                                                <?php echo esc_html( $address ) ?>
+                                            </span>
+                                            </li>
+										<?php
+										endif;
+										$email = $themeHeaderOptions['newblog-footer-email'];
+										if ( $email ): ?>
+                                            <li class="fx">
+                                                <a href="mailto:<?php echo esc_html( $email ); ?>">
+                                                    <i class="far fa-envelope"></i>
+													<?php echo esc_html( $email ); ?>
+                                                </a>
+                                            </li>
+										<?php
+										endif;
+										$phoneNumber = $themeHeaderOptions['newblog-footer-phone'];
+										if ( $phoneNumber ): ?>
+                                            <li class="fx">
+                                                <a href="tel:<?php echo esc_attr( $phoneNumber ); ?>"><i
+                                                            class="fal fa-phone"></i>
+													<?php echo esc_html( $phoneNumber ); ?>
+                                                </a>
+                                            </li>
+										<?php endif; ?>
+                                    </ul>
+                                </div>
                             </div>
-                            <p class="wrap f-mulish">Sit amet consectetur adipiscing elit sed do eiusmod
-                                teminci idunt ut labore et dolore magna</p>
-                            <div class="list-contact">
-                                <ul>
-                                    <li class="fx"><span><i class="far fa-map-marker-alt"></i> 55 Main
-                                                        Street, New York</span></li>
-                                    <li class="fx"><a href="mailto:hotline@gmail.com"><i
-                                                    class="far fa-envelope"></i> hotline@gmail.com</a></li>
-                                    <li class="fx"><a href="tel:012345678"><i class="fal fa-phone"></i> +012
-                                            (345) 678</a></li>
+						<?php endif; ?>
+
+                        <div class="widget widget-link">
+                            <h4 class="title-widget">Useful links</h4>
+							<?php get_template_part( './template-parts/common/navigation/navigation', 'footer' ); ?>
+                        </div>
+						<?php $newPostArgsArgs = array(
+							'posts_per_page'      => 3,
+							'ignore_sticky_posts' => true,
+						);
+						$newPostArgs           = new WP_Query( $newPostArgsArgs );
+						if ( $newPostArgs->post_count > 0 ): ?>
+                            <div class="widget widget-news st-3">
+                                <h4 class="title-widget">recent news</h4>
+                                <ul class="list-news">
+
+	                                <?php if ( $newPostArgs->have_posts() ): while ( $newPostArgs->have_posts() ): $newPostArgs->the_post(); ?>
+                                        <li <?php post_class( 'fx' ); ?>>
+			                                <?php the_post_thumbnail( 'thumb80', ['class' => 'feature'] ); ?>
+                                            <ul class="box-content">
+                                                <li>
+                                                    <h6 class="title">
+                                                        <a href="<?php echo esc_url( get_the_permalink() ); ?>">
+							                                <?php echo esc_html( get_the_title() ); ?>
+                                                        </a>
+                                                    </h6>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo esc_url( get_the_permalink() ); ?>"
+                                                       class="fx meta-news clr-pri-4"><i
+                                                                class="far fa-calendar-alt"></i>
+                                                        <span class="f-rubik">
+                                                                <time datetime="<?php echo esc_html( the_modified_date( 'c' ) ); ?>">
+                                                                    <?php echo esc_html( the_modified_date() ); ?>
+                                                                </time>
+                                                            </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+	                                <?php endwhile; endif; ?>
+
                                 </ul>
                             </div>
-                        </div>
-                        <div class="widget widget-business">
-                            <div class="inner">
-                                <div class="op-time">
-                                    <h4 class="title-widget">opening hours</h4>
-                                    <ul>
-                                        <li><span class="f-mulish">Sunday - Friday</span></li>
-                                        <li><span class="f-mulish">08 am - 05 pm</span></li>
-                                    </ul>
-                                </div>
-                                <div class="cls-time">
-                                    <p>Every Satarday and Govt Holiday</p>
-                                    <h4 class="title-widget">closed</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="widget widget-link">
-                            <h4 class="title-widget">Our Program</h4>
-                            <ul class="list-link">
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">Arts &
-                                        Drawing</a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">Computer
-                                        Engineering </a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">Digital
-                                        Mathematics</a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">Physical
-                                        Exercise</a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">General
-                                        Science</a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">English
-                                        Basic</a></li>
-                                <li class="fx"><a href="program.html" class="wd-ctm f-mulish">Social
-                                        Science</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget widget-news st-3">
-                            <h4 class="title-widget">recent news</h4>
-                            <ul class="list-news">
-                                <li class="fx">
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/thumbnails/widget9.jpg"
-                                         alt="Image"
-                                         class="feature">
-                                    <ul class="box-content">
-                                        <li>
-                                            <h6 class="title"><a href="blog-grid.html">Useful Code Extened
-                                                    End Developers</a></h6>
-                                        </li>
-                                        <li><a href="blog-grid.html" class="fx meta-news clr-pri-6"><i
-                                                        class="far fa-calendar-alt"></i>25 dec 2021</a></li>
-                                    </ul>
-                                </li>
-                                <li class="fx">
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/thumbnails/widget10.jpg"
-                                         alt="Image"
-                                         class="feature">
-                                    <ul class="box-content">
-                                        <li>
-                                            <h6 class="title"><a href="blog-grid.html">Useful Code Extened
-                                                    End Developers</a></h6>
-                                        </li>
-                                        <li><a href="blog-grid.html" class="fx meta-news clr-pri-6"><i
-                                                        class="far fa-calendar-alt"></i>25 dec 2021</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+						<?php endif;
+						wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="footer-bottom jus-ct">
-                        <p class="copy-right">Copyright © 2022, Kinco - Kindergarten HTML Template. Designed
-                            by <a href="https://themeforest.net/user/themesflat/portfolio">Themesflat</a>
-                        </p>
+						<?php
+						if ( function_exists( 'get_option' ) ):
+							$newblogFooterOptions = get_option( 'theme_framework' );
+							$newblogCopyrightText = $newblogFooterOptions['newblog-footer-copyright-text'];
+							if ( $newblogCopyrightText ):
+								echo '<p class="copy-right">' . $newblogCopyrightText . '</p>';
+							else:
+								echo '<p class="copy-right">&copy;' . date( "Y" ) . ' ' . get_bloginfo( 'name' ) . '. All rights reserved.</p>';
+							endif;
+						else:
+							echo '<p class="copy-right">&copy;' . date( "Y" ) . ' ' . get_bloginfo( 'name' ) . '. All rights reserved.</p>';
+						endif;
+						?>
                     </div>
                 </div>
             </div>

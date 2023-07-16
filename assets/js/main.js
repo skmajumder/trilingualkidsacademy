@@ -287,5 +287,11 @@
             mobileNav();
         });
 
+        const nevItems = document.querySelectorAll('.menu-item')
+        nevItems.forEach(item => item.classList.add('fx'))
+
+        const nevItemLinks = document.querySelectorAll('.widget-link .list-link a')
+        nevItemLinks.forEach(link => link.classList.add("wd-ctm", "f-mulish"))
+
     });
 })(jQuery);

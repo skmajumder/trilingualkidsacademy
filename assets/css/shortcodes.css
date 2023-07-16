@@ -605,7 +605,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: url(../images/thumbnails/studying-classroom.jpg) center center no-repeat;
+    background: url(../images/thumbnails/studying-classroom2.jpg) center center no-repeat;
     background-size: cover;
     -webkit-mask-image: url(../images/background/mask3.png);
     mask-image: url(../images/background/mask3.png);
@@ -1232,7 +1232,7 @@
 	margin-right : 10px;
 }
 
-.themesflat-pagination ul li a {
+.themesflat-pagination ul li a, .themesflat-pagination ul li span {
 	border-radius: 50%;
     display         : inline-block;
 	font-size       : 20px;
@@ -3178,7 +3178,6 @@
 }
 
 .fl-register {
-    background-image: url(../images/background/bg-form-register.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -27,11 +27,11 @@ get_header( 'home' );
     <!-- :: Section CTA :: -->
 <?php get_template_part( './template-parts/sections/section', 'cta' ); ?>
 
-    <!-- :: Section Free Demo :: -->
-
-
     <!-- :: Section Feedback :: -->
 <?php get_template_part( './template-parts/sections/section', 'feedback' ); ?>
+
+    <!-- :: Section Free Demo :: -->
+<?php get_template_part( './template-parts/sections/section', 'free-demo' ); ?>
 
     <!-- :: Section Blog :: -->
 <?php get_template_part( './template-parts/sections/section', 'blog' ); ?>

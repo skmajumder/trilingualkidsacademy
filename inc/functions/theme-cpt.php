@@ -50,7 +50,7 @@ function create_trilingualkidsacademy_cpt(): void {
 		'has_archive'         => false,
 		'hierarchical'        => false,
 		'exclude_from_search' => true,
-		'show_in_rest'        => true,
+		'show_in_rest'        => false,
 		'publicly_queryable'  => false,
 		'capability_type'     => 'post',
 		'rewrite'             => false,

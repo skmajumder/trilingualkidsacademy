@@ -12,6 +12,13 @@ define( 'VERSION', wp_get_theme()->get( 'Version' ) );
 require_once get_theme_file_path( './inc/tgm.php' );
 
 /**
+ * Codestar Framework
+ */
+
+require_once get_theme_file_path() . '/lib/codestar-framework/codestar-framework.php';
+require_once get_theme_file_path() . '/lib/codestar-framework/option.php';
+
+/**
  * Enable Theme Support
  */
 

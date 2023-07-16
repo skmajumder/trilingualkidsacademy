@@ -17,19 +17,9 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 
-<!-- Preloader -->
-<div id="preload" class="preload">
-    <div class="preload-logo"></div>
-</div>
-
 <div id="wrapper">
     <div id="page" class="clearfix">
         <header id="header">
-            <div class="top-bar">
-                <div class="inner jus-ct">
-                    <p class="clr-pri-1">Working Jours : Sun - Friday, 08:00 am - 05:00 pm</p>
-                </div>
-            </div>
             <div id="site-header">
                 <div class="container-fluid">
                     <div class="row">
@@ -43,76 +33,7 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 </div>
                                 <div class="btn-menu"><span></span></div>
                                 <div class="nav-wrap">
-                                    <nav id="mainnav" class="mainnav st-2">
-                                        <ul class="menu">
-                                            <li class="menu-item-has-children">
-                                                <a href="#">HOME</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="index.html">Home 01</a></li>
-                                                    <li><a href="home2.html">Home 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item current-menu-item">
-                                                <a href="about.html">About</a>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a>PAGES</a>
-                                                <ul class="sub-menu">
-                                                    <li class="inner-menu-item"><a href="#">Teachers</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="teacher.html">Teacher</a></li>
-                                                            <li><a href="teacher-details.html">Teachers Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="inner-menu-item "><a href="#">Classes</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="classes.html">Classes</a></li>
-                                                            <li><a href="classe-details.html">Classes Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="inner-menu-item"><a href="#">Events</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="events.html">Event</a></li>
-                                                            <li><a href="event2.html">Event 2</a></li>
-                                                            <li><a href="event-details.html">Events Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="calendar.html">Academic Calendar</a></li>
-                                                    <li><a href="testimonials.html">testimonials</a></li>
-                                                    <li><a href="time-table.html">Time Table</a></li>
-                                                    <li><a href="gallery.html">gallery</a></li>
-                                                    <li><a href="pricing.html">pricing</a></li>
-                                                    <li><a href="faq.html">Faq</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a>Programs</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="program.html">Program</a></li>
-                                                    <li><a href="program-details.html">program details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a>BLOG</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="blog-grid.html">blog grid</a></li>
-                                                    <li><a href="blog-list.html">blog list</a></li>
-                                                    <li><a href="blog-single.html">blog single</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a>SHOP</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="inner">
-                                                <a href="contact.html">CONTACTS</a>
-                                            </li>
-                                        </ul>
-                                        <!-- /.menu -->
-                                    </nav>
+									<?php get_template_part( './template-parts/common/navigation/navigation', 'top' ); ?>
                                 </div>
                                 <div class="header-right fx">
                                     <div id="header-search">

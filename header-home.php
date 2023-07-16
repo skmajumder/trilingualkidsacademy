@@ -25,10 +25,17 @@ if ( function_exists( 'wp_body_open' ) ) {
                     <div class="col-md-12">
                         <div class="site-header-inner fx">
                             <div id="site-logo" class="clearfix">
-                                <a href="index.html" class="logo">
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo/logodark.png"
-                                         alt="Kinco">
-                                </a>
+								<?php
+								if ( function_exists( 'get_option' ) ):
+									$themeHeaderOptions = get_option( 'theme_framework' );
+									$newThemeLogo = $themeHeaderOptions['newblog-logo'];
+									if ( $newThemeLogo ): ?>
+                                        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                            <img class="img-fluid" height="60" width="60"
+                                                 src="<?php echo esc_url( $newThemeLogo ); ?>"
+                                                 alt="Logo">
+                                        </a>
+									<?php endif; endif; ?>
                             </div>
                             <div class="btn-menu">
                                 <span></span>
@@ -39,17 +46,6 @@ if ( function_exists( 'wp_body_open' ) ) {
                             </div>
 
                             <div class="header-right fx">
-                                <div id="header-search">
-                                    <a href="#" class="search-box header-search-icon">
-                                        <i class="far fa-search"></i>
-                                    </a>
-                                    <form role="search" method="get" class="header-search-form" action="#">
-                                        <input type="text" value="" name="s" class="header-search-field"
-                                               placeholder="Search...">
-                                        <button type="submit" class="header-search-submit" title="Search"><i
-                                                    class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
                                 <div class="header-contact fx">
                                     <a href="#" class="menu-bar-right header-menu">
                                         <svg data-name="Hero Area" xmlns="http://www.w3.org/2000/svg" width="58"
@@ -92,10 +88,22 @@ if ( function_exists( 'wp_body_open' ) ) {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <ul>
-                                            <li class="clr-pri-2">Hotline</li>
-                                            <li class="clr-pri-2">+012 (345) 678</li>
-                                        </ul>
+										<?php
+										if ( function_exists( 'get_option' ) ):
+											$themeHeaderOptions = get_option( 'theme_framework' );
+											$contactNumber = $themeHeaderOptions['newblog-number'];
+
+											if ( $contactNumber ): ?>
+                                                <ul>
+                                                    <li class="clr-pri-2">Hotline</li>
+                                                    <li class="clr-pri-2">
+                                                        <a href="tel:<?php echo esc_attr( $contactNumber ); ?>">
+															<?php echo esc_html( $contactNumber ) ?>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+											<?php endif; endif; ?>
+
                                     </div>
                                 </div>
 
@@ -114,61 +122,26 @@ if ( function_exists( 'wp_body_open' ) ) {
                                     alt="images"></a>
                     </div>
                     <div class="wrap">
-                        <div class="widget widget-quote">
-                            <div class="box-feature">
-                                <div class="inner">
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post/post-quotes2.jpg"
-                                         alt="Image">
-                                    <div class="box-icon jus-ali-ct">
-                                        <i class="far fa-quote-right"></i>
-                                    </div>
+						<?php
+						$allCategory = get_categories();
+						if ( $allCategory ): ?>
+                            <div class="widget widget-category st-2">
+                                <h4 class="title-widget fl-ctm-1">category<span class="ctm-inner"></span></h4>
+                                <div class="list-category">
+                                    <ul>
+										<?php foreach ( $allCategory as $category ): ?>
+                                            <li class="fx">
+                                                <span class="st wd-ctm"><?php echo esc_html( $category->name ); ?></span>
+                                                <span class="st"><?php echo esc_html( $category->count ); ?></span>
+                                            </li>
+										<?php endforeach; ?>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="box-content">
-                                <h5 class="author clr-pri-2">Patrick D. Smith</h5>
-                                <p class="wrap f-rubik">
-                                    Sit amet consectetur adipiscing elit sed do eiusmod tempor didunt ut labore et
-                                    dolore magna
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="widget widget-category st-2">
-                            <h4 class="title-widget fl-ctm-1">category<span class="ctm-inner"></span></h4>
-                            <div class="list-category">
-                                <ul>
-                                    <li class="fx"><span class="st wd-ctm">Arts &amp; Drawing</span><span
-                                                class="st">05</span></li>
-                                    <li class="fx"><span class="st wd-ctm">Basic Language</span><span
-                                                class="st">02</span></li>
-                                    <li class="fx"><span class="st wd-ctm">Graphics Design</span><span
-                                                class="st">07</span></li>
-                                    <li class="fx"><span class="st wd-ctm">Web Development</span><span
-                                                class="st">04</span></li>
-                                    <li class="fx"><span class="st wd-ctm">Lifestyle</span><span
-                                                class="st">06</span></li>
-                                    <li class="fx"><span class="st wd-ctm">GYM &amp; Gaming</span><span
-                                                class="st">05</span></li>
-                                    <li class="fx"><span class="st wd-ctm">Events &amp; Party</span><span
-                                                class="st">05</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="widget widget-tag st-2">
-                            <h4 class="title-widget fl-ctm-1">best tags<span class="ctm-inner"></span></h4>
-                            <ul class="list-tag">
-                                <li><a href="shop-details.html" class="f-rubik active">Technology</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">service</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">team</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">solutions</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">consultancy</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">It Company</a></li>
-                                <li><a href="shop-details.html" class="f-rubik">agency</a></li>
-                            </ul>
-                        </div>
+						<?php
+						endif; ?>
 
                     </div>
-                </div><!--/inner-sidebar-->
+                </div>
             </aside>
         </header>
